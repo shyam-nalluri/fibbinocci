@@ -1,3 +1,0 @@
-git integration with jenkins
-	- Poll scm
-	- git webhooks
