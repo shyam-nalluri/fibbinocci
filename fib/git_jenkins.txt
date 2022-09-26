@@ -1,5 +1,3 @@
-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
-
 git integration with jenkins
 	- Poll scm
 	- git webhooks
