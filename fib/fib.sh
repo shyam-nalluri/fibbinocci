@@ -1,9 +1,9 @@
 #!/bin/bash
-
+n=$1
 fibbinocci () {
 
 	echo "Enter number: "
-	n=7
+	#n=7
 	a=0
 	b=1
 	counter=0
@@ -19,6 +19,5 @@ fibbinocci () {
 	echo The fib of $n is $fib
 
 }
-
 
 fibbinocci
