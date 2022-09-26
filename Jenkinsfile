@@ -17,8 +17,8 @@ pipeline {
       steps {
 	      echo 'Build Steps'
         	sh '''
-			chmod 755 fib.sh
-			fib.sh 70
+			chmod 755 ./fib.sh
+			./fib.sh 70
         	'''
         }
     }
