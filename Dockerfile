@@ -1,4 +1,4 @@
-FROM apline
+FROM ubuntu
 
 ADD fib.sh /app/fib.sh
 
