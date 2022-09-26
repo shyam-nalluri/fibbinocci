@@ -18,7 +18,7 @@ pipeline {
       steps {
         echo 'Build Steps'
         sh '''
-			chmod 755 ./fib/fib.sh
+			chmod 755 fib.sh
 			./fib/fib.sh 70
         '''
         }
@@ -26,7 +26,7 @@ pipeline {
     stage("Build") {
         steps {
             echo 'Build Steps'
-            sh 'docker build -t shyamnalluri/jenkins-fib:latest ./fib/'
+            sh 'docker build -t shyamnalluri/jenkins-fib:latest .'
         }
     }
     stage ('login'){
