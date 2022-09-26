@@ -1,0 +1,1 @@
+DOCKERHUB_CREDENTIALS=credentials('jenkins-docker-key')
