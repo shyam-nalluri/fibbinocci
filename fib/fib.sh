@@ -1,3 +1,5 @@
+#!/bin/bash
+
 fibbinocci () {
 
 	echo "Enter number: "
