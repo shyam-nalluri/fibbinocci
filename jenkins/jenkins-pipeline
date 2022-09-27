@@ -18,15 +18,15 @@ pipeline {
       steps {
         echo 'Build Steps'
         sh '''
-			chmod 755 ./fib.sh
-			./fib.sh 7
+			chmod 755 ./fib/fib.sh
+			./fib/fib.sh 70
         '''
         }
     }
     stage("Build") {
         steps {
             echo 'Build Steps'
-            sh 'docker build -t shyamnalluri/jenkins-fib:latest .'
+            sh 'docker build -t shyamnalluri/jenkins-fib:1.0 ./fib/'
         }
     }
     stage ('login'){
@@ -38,7 +38,7 @@ pipeline {
     stage ('docker-push'){
         steps {
             echo 'Pushing to docker hub'
-            sh 'docker push shyamnalluri/jenkins-fib:latest'
+            sh 'docker push shyamnalluri/jenkins-fib:1.0'
         }
     }
   }
