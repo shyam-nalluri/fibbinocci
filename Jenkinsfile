@@ -29,6 +29,12 @@ pipeline {
             sh 'docker build -t shyamnalluri/jenkins-fib:latest .'
         }
     }
+	stage ('run-build'){
+		steps{
+			echo 'running'
+			sh 'docker -it run shyamnalluri/jenkins-fib:latest'			
+			}
+		}
     stage ('login'){
         steps {
             echo 'logging in to docker hub'
