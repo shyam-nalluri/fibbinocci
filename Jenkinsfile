@@ -32,7 +32,7 @@ pipeline {
     stage ('run-build'){
 	steps{
 	    echo 'running'
-	    sh 'winpty docker run -it shyamnalluri/jenkins-fib:latest'			
+	    sh 'docker run shyamnalluri/jenkins-fib:latest'		
 			}
 		}
     stage ('login'){
