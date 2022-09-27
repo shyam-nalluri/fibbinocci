@@ -1,8 +1,8 @@
 #!/bin/bash
+echo "Enter number: "
 read n
 fibbinocci () {
 
-	echo "Enter number: "
 	a=0
 	b=1
 	counter=0
