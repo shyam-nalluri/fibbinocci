@@ -14,27 +14,27 @@ pipeline {
         git branch: 'main', url: 'https://github.com/shyamriversafe/fibbinocci.git'
       }
     }
-    stage("run") {
-      steps {
-        echo 'Build Steps'
-        sh '''
-			chmod 755 ./fib.sh
-			./fib.sh 7
-        '''
-        }
-    }
     stage("Build") {
         steps {
-            echo 'Build Steps'
-            sh 'docker build -t shyamnalluri/jenkins-fib:latest .'
+		echo 'Build Steps'
+           	sh 'docker build -t shyamnalluri/jenkins-fib:latest .'
+        }
+    }  
+    stage("test") {
+       steps {
+        	echo 'Testing code'
+         	sh '''
+			chmod 755 ./fib.sh
+			./fib.sh 7
+        	'''
         }
     }
-    stage ('run-build'){
-	steps{
-	    echo 'running'
-	    sh 'docker run shyamnalluri/jenkins-fib:latest'		
-			}
-		}
+//     stage ('test'){
+// 	steps{
+// 	    echo 'running'
+// 	    sh 'docker run shyamnalluri/jenkins-fib:latest'		
+// 			}
+// 		}
     stage ('login'){
         steps {
             echo 'logging in to docker hub'
